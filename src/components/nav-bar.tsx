@@ -3,7 +3,7 @@ import theme from "../theme/theme";
 import { Section } from "../App";
 
 export type NavBarProps = {
-    scrollToRef: (section: Section) => void;
+  scrollToRef: (section: Section) => void;
 };
 
 const NavBar = ({ scrollToRef }: NavBarProps) => {
@@ -12,15 +12,15 @@ const NavBar = ({ scrollToRef }: NavBarProps) => {
       position="fixed"
       sx={{
         backgroundColor: theme.palette.secondary.main,
-        height: "60px",
+        eight: "60px",
         marginBottom: "60px",
       }}
     >
       <Toolbar>
-        <Grid container justifyContent="space-between" alignItems="center">
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            QUB Cyber Security Society
-          </Typography>
+        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          QUB Cyber Security Society
+        </Typography>
+        <Grid container justifyContent="space-between" alignItems="right">
           <Button color="inherit" onClick={() => scrollToRef("landing")}>
             Home
           </Button>

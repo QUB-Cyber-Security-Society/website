@@ -20,16 +20,9 @@ const LandingSection = forwardRef<HTMLDivElement>(({ ...props }, ref) => {
         <Typography
           variant="h2"
           component="h1"
-          sx={{ color: theme.palette.primary.main }}
+          sx={{ color: theme.palette.primary.main, padding: "20px" }}
         >
-          Welcome to My Website
-        </Typography>
-        <Typography
-          variant="h5"
-          component="p"
-          sx={{ color: theme.palette.primary.main }}
-        >
-          This is a simple landing section.
+          Lorem ipsum dolor sit amet
         </Typography>
       </Grid>
     </Box>
