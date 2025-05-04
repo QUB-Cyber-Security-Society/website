@@ -1,5 +1,6 @@
-import { Box } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import React, { forwardRef } from "react";
+import EventBox from "../../components/common/event-box";
 
 const EventsSection = forwardRef<HTMLDivElement>(({ ...props }, ref) => {
   return (
@@ -12,10 +13,38 @@ const EventsSection = forwardRef<HTMLDivElement>(({ ...props }, ref) => {
         textAlign: "center",
       }}
     >
-      <h2>Events Section</h2>
-      <p>This is the events section of the website.</p>
-      <p>Here you can find information about upcoming events.</p>
-      <p>Stay tuned for more updates!</p>
+      <Typography variant="h4" gutterBottom>
+        Upcoming Events
+      </Typography>
+      <Grid
+        container
+        spacing={2}
+        justifyContent="center"
+        alignItems="center"
+        sx={{ marginTop: "20px" }}
+      >
+        <EventBox
+          title="Cyber Security Workshop"
+          description="Join us for an interactive workshop on the latest trends in cyber security."
+          date="2023-10-15"
+          time="10:00 AM - 2:00 PM"
+          location="Room 101, Main Building"
+        />
+        <EventBox
+          title="Guest Lecture: Cyber Threats"
+          description="A guest lecture by an industry expert on the current cyber threats."
+          date="2023-10-20"
+          time="1:00 PM - 3:00 PM"
+          location="Room 202, Main Building"
+        />
+        <EventBox
+          title="Capture the Flag Competition"
+          description="Participate in our annual CTF competition and win exciting prizes!"
+          date="2023-11-05"
+          time="9:00 AM - 5:00 PM"
+          location="Auditorium, Main Building"
+        />
+      </Grid>
     </Box>
   );
 });
