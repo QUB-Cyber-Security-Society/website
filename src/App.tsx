@@ -4,6 +4,7 @@ import LandingSection from "./pages/landing/landing-section";
 import EventsSection from "./pages/events/events-section";
 import SocialsSection from "./pages/socials/socials-section";
 import CommitteeSection from "./pages/committee/committee-section";
+import Footer from "./components/footer";
 
 export type Section = "landing" | "events" | "committee" | "socials";
 
@@ -39,6 +40,7 @@ const App = () => {
       <EventsSection ref={eventsRef} />
       <CommitteeSection ref={committeeRef} />
       <SocialsSection ref={socialsRef} />
+      <Footer />
     </>
   );
 };
