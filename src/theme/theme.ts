@@ -1,19 +1,22 @@
-import { createTheme } from '@mui/material/styles';
+import { createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#DC2148',
+      main: "#DC2148",
     },
     secondary: {
-      main: '#212020',
+      main: "#212020",
+    },
+    background: {
+      default: "rgb(240, 240, 240)",
     },
   },
   typography: {
-    fontFamily: 'Roboto, Arial, sans-serif',
+    fontFamily: "Anonymous Pro, monospace",
     h6: {
-        color: '#9CA3AF'
-    }
+      color: "#9CA3AF",
+    },
   },
 });
 

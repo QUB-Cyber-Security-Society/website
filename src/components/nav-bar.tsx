@@ -20,7 +20,12 @@ const NavBar = ({ scrollToRef }: NavBarProps) => {
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           QUB Cyber Security Society
         </Typography>
-        <Grid container justifyContent="space-between" alignItems="right">
+        <Grid
+          container
+          justifyContent="space-between"
+          alignItems="right"
+          sx={{ display: { xs: "none", md: "flex" } }}
+        >
           <Button color="inherit" onClick={() => scrollToRef("landing")}>
             Home
           </Button>
