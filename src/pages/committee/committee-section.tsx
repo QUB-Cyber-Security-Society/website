@@ -45,6 +45,9 @@ const CommitteeSection = forwardRef<HTMLDivElement>(({ ...props }, ref) => {
           name={"Jake Turner"}
           position={"Treasurer"}
           imageUrl={"https://placehold.jp/200x200.png"}
+          email="jturner23@qub.ac.uk"
+          linkedIn="https://www.linkedin.com/in/jake-turner-045b6b266/"
+          github="https://github.com/jake-t-dev"
         />
       </Box>
     </>

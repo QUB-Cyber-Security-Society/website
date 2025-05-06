@@ -1,6 +1,8 @@
-import { Box, Typography } from "@mui/material";
-import EmailTwoToneIcon from '@mui/icons-material/EmailTwoTone';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Box, Grid, Typography } from "@mui/material";
+import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 export type ProfileBoxProps = {
   name: string;
@@ -11,7 +13,14 @@ export type ProfileBoxProps = {
   github?: string;
 };
 
-const ProfileBox = ({ name, position, imageUrl, email, linkedIn, github }: ProfileBoxProps) => {
+const ProfileBox = ({
+  name,
+  position,
+  imageUrl,
+  email,
+  linkedIn,
+  github,
+}: ProfileBoxProps) => {
   return (
     <Box
       sx={{
@@ -46,26 +55,40 @@ const ProfileBox = ({ name, position, imageUrl, email, linkedIn, github }: Profi
         />
         <Typography variant="h5">{name}</Typography>
         <Typography variant="body2">{position}</Typography>
-        {email && (
-          <EmailTwoToneIcon
-            onClick={() => window.open(`mailto:${email}`)}
-            sx={{
-              cursor: "pointer",
-              fontSize: "24px",
-              marginTop: "8px",
-            }}
-          />
-        )}
-        {linkedIn && (
-          <Typography variant="body2" color="textSecondary">
-            <a href={linkedIn} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "inherit" }}>
-              LinkedIn
-            </a>
-          </Typography>
-        )}
-        {github && (
-          <FontAwesomeIcon icon="fa-brands fa-github" />
-        )}
+        <Grid container spacing={2} sx={{ marginTop: "16px" }}>
+          {email && (
+            <EmailOutlinedIcon
+              onClick={() => window.open(`mailto:${email}`)}
+              sx={{
+                cursor: "pointer",
+                fontSize: "24px",
+                marginTop: "8px",
+              }}
+            />
+          )}
+          {linkedIn && (
+            <FontAwesomeIcon
+              icon={faLinkedin}
+              onClick={() => window.open(linkedIn)}
+              style={{
+                cursor: "pointer",
+                fontSize: "24px",
+                marginTop: "8px",
+              }}
+            />
+          )}
+          {github && (
+            <FontAwesomeIcon
+              icon={faGithub}
+              onClick={() => window.open(github)}
+              style={{
+                cursor: "pointer",
+                fontSize: "24px",
+                marginTop: "8px",
+              }}
+            />
+          )}
+        </Grid>
       </Box>
     </Box>
   );
