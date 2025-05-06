@@ -26,9 +26,9 @@ const SocialsSection = forwardRef<HTMLDivElement>(({ ...props }, ref) => {
         alignItems="center"
         sx={{ marginTop: "20px" }}
       >
-        <SocialBox />
-        <SocialBox />
-        <SocialBox />
+        <SocialBox link={"https://www.linkedin.com/embed/feed/update/urn:li:share:7266751603716583425"} />
+        <SocialBox link={"https://www.instagram.com/p/DBzqxCMIWc_/embed/"} />
+        
       </Grid>
       <Box
         {...props}

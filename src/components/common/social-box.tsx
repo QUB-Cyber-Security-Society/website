@@ -1,15 +1,31 @@
-const SocialBox = () => {
-    return (
+import { Box } from "@mui/material";
+
+export type SocialBoxProps = {
+  link: string,
+}
+
+const SocialBox = ({ link }: SocialBoxProps) => {
+  return (
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        gap: 2,
+        borderRadius: 2,
+        overflow: "hidden",
+        marginBottom: 4,
+        boxShadow: 2,
+      }}
+    >
       <iframe
-        src="https://www.linkedin.com/embed/feed/update/urn:li:share:7266107761568923648?collapsed=1"
-        height="629"
-        width="504"
+        src={link}
+        height="400"
+        width="100%"
         frameBorder="0"
-        allowFullScreen
-        title="Embedded post"
+        allowFullScreen={true}
       ></iframe>
-    );
-  };
-  
-  export default SocialBox;
-  
+    </Box>
+  );
+};
+
+export default SocialBox;
