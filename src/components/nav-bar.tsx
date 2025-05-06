@@ -32,11 +32,11 @@ const NavBar = ({ scrollToRef }: NavBarProps) => {
           <Button color="inherit" onClick={() => scrollToRef("events")}>
             Events
           </Button>
-          <Button color="inherit" onClick={() => scrollToRef("committee")}>
-            Committee
-          </Button>
           <Button color="inherit" onClick={() => scrollToRef("socials")}>
             Socials
+          </Button>
+          <Button color="inherit" onClick={() => scrollToRef("committee")}>
+            Committee
           </Button>
         </Grid>
       </Toolbar>

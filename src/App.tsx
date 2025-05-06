@@ -11,8 +11,8 @@ export type Section = "landing" | "events" | "committee" | "socials";
 const App = () => {
   const landingRef = useRef<HTMLDivElement | null>(null);
   const eventsRef = useRef<HTMLDivElement | null>(null);
-  const committeeRef = useRef<HTMLDivElement | null>(null);
   const socialsRef = useRef<HTMLDivElement | null>(null);
+  const committeeRef = useRef<HTMLDivElement | null>(null);
 
   const scrollToRef = (section: Section) => {
     switch (section) {
@@ -22,11 +22,11 @@ const App = () => {
       case "events":
         eventsRef.current?.scrollIntoView({ behavior: "smooth" });
         break;
-      case "committee":
-        committeeRef.current?.scrollIntoView({ behavior: "smooth" });
-        break;
       case "socials":
         socialsRef.current?.scrollIntoView({ behavior: "smooth" });
+        break;
+      case "committee":
+        committeeRef.current?.scrollIntoView({ behavior: "smooth" });
         break;
       default:
         break;
@@ -38,8 +38,8 @@ const App = () => {
       <NavBar scrollToRef={scrollToRef} />
       <LandingSection ref={landingRef} />
       <EventsSection ref={eventsRef} />
-      <CommitteeSection ref={committeeRef} />
       <SocialsSection ref={socialsRef} />
+      <CommitteeSection ref={committeeRef} />
       <Footer />
     </>
   );
