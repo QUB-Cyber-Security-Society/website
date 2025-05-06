@@ -1,11 +1,15 @@
-import { Typography } from "@mui/material"
-
 const SocialBox = () => {
     return (
-        <Typography>
-            Test
-        </Typography>
-    )
-}
-
-export default SocialBox
+      <iframe
+        src="https://www.linkedin.com/embed/feed/update/urn:li:share:7266107761568923648?collapsed=1"
+        height="629"
+        width="504"
+        frameBorder="0"
+        allowFullScreen
+        title="Embedded post"
+      ></iframe>
+    );
+  };
+  
+  export default SocialBox;
+  
