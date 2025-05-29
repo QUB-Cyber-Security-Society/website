@@ -1,8 +1,8 @@
 name: ESLint Check
 
 on:
+  push:
   pull_request:
-    branches: [main]
 
 jobs:
   lint:
@@ -20,5 +20,5 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run ESLint
-        run: npm run lint
+      - name: Run ESLint (fail on warnings)
+        run: npx eslint . --max-warnings=0
