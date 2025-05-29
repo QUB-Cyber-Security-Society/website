@@ -13,6 +13,7 @@ const SocialsSection = forwardRef<HTMLDivElement>(({ ...props }, ref) => {
           backgroundColor: theme.palette.background.default,
           padding: "20px",
           textAlign: "center",
+          scrollMarginTop: "80px",
         }}
       >
         <Typography variant="h4" gutterBottom>

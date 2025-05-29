@@ -11,6 +11,7 @@ const EventsSection = forwardRef<HTMLDivElement>(({ ...props }, ref) => {
         backgroundColor: "#f0f0f0",
         padding: "20px",
         textAlign: "center",
+        scrollMarginTop: "80px",
       }}
     >
       <Typography variant="h4" gutterBottom>
