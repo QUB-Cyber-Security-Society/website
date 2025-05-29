@@ -1,8 +1,11 @@
 import { Box, Grid, Typography } from "@mui/material";
-import React, { forwardRef } from "react";
 import EventBox from "../../components/common/event-box";
 
-const EventsSection = forwardRef<HTMLDivElement>(({ ...props }, ref) => {
+export type EventsSectionProps = {
+  ref?: React.Ref<HTMLDivElement>;
+}
+
+const EventsSection = ({ ref, ...props }: EventsSectionProps) => {
   return (
     <Box
       ref={ref}
@@ -47,6 +50,6 @@ const EventsSection = forwardRef<HTMLDivElement>(({ ...props }, ref) => {
       </Grid>
     </Box>
   );
-});
+};
 
 export default EventsSection;

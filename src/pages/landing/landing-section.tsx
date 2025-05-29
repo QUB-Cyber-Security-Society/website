@@ -1,17 +1,22 @@
 import { Box, Button, Grid, Typography } from "@mui/material";
-import React, { forwardRef, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import theme from "../../theme/theme";
 import { useHackerText } from "../../hooks/use-hacker-text";
 
-const LandingSection = forwardRef<HTMLDivElement>(({ ...props }, ref) => {
+export type LandingSectionProps = {
+  ref?: React.Ref<HTMLDivElement>;
+}
+
+const LandingSection = ({ ref, ...props }: LandingSectionProps) => {
   const { text, hackText } = useHackerText();
   const [slideIn, setSlideIn] = useState(false);
 
   useEffect(() => {
     hackText();
-    setTimeout(() => {
+    const timeoutId = setTimeout(() => {
       setSlideIn(true);
     }, (1000 / 30) * (text.length + 1));
+    return () => clearTimeout(timeoutId);
   }, []);
 
   return (
@@ -98,6 +103,6 @@ const LandingSection = forwardRef<HTMLDivElement>(({ ...props }, ref) => {
       </Grid>
     </Box>
   );
-});
+};
 
 export default LandingSection;

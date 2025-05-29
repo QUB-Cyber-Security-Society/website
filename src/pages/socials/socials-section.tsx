@@ -1,9 +1,12 @@
-import React, { forwardRef } from "react";
 import theme from "../../theme/theme";
 import { Box, Grid, Typography } from "@mui/material";
 import SocialBox from "../../components/common/social-box";
 
-const SocialsSection = forwardRef<HTMLDivElement>(({ ...props }, ref) => {
+export type SocialsSectionProps = {
+  ref?: React.Ref<HTMLDivElement>;
+};
+
+const SocialsSection = ({ ref, ...props }: SocialsSectionProps) => {
   return (
     <>
       <Box
@@ -45,6 +48,6 @@ const SocialsSection = forwardRef<HTMLDivElement>(({ ...props }, ref) => {
       </Box>
     </>
   );
-});
+};
 
 export default SocialsSection;

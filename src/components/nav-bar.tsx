@@ -12,7 +12,6 @@ const NavBar = ({ scrollToRef }: NavBarProps) => {
       position="fixed"
       sx={{
         backgroundColor: theme.palette.secondary.main,
-        eight: "60px",
         marginBottom: "60px",
       }}
     >
