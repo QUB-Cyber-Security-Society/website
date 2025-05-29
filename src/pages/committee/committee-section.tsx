@@ -1,9 +1,12 @@
 import { Box, Typography } from "@mui/material";
-import React, { forwardRef } from "react";
 import theme from "../../theme/theme";
 import ProfileBox from "../../components/common/profile-box";
 
-const CommitteeSection = forwardRef<HTMLDivElement>(({ ...props }, ref) => {
+export type CommitteeSectionProps = {
+  ref?: React.Ref<HTMLDivElement>;
+}
+
+const CommitteeSection = ({ ref, ...props }: CommitteeSectionProps) => {
   return (
     <>
       <Box
@@ -52,6 +55,6 @@ const CommitteeSection = forwardRef<HTMLDivElement>(({ ...props }, ref) => {
       </Box>
     </>
   );
-});
+};
 
 export default CommitteeSection;
