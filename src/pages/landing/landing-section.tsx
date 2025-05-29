@@ -26,7 +26,6 @@ const LandingSection = ({ ref, ...props }: LandingSectionProps) => {
       sx={{
         overflowX: "hidden",
         backgroundColor: theme.palette.secondary.main,
-        marginTop: "30px",
         height: { xs: "50vh", md: "100vh" },
         boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.3)",
         marginBottom: "30px",
@@ -94,7 +93,7 @@ const LandingSection = ({ ref, ...props }: LandingSectionProps) => {
             component="h2"
             sx={{
               color: theme.palette.secondary.main,
-              padding: "30px",
+              padding: "60px",
             }}
           >
             TODO: PUT AN IMAGE HERE

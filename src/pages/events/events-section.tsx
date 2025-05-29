@@ -14,6 +14,7 @@ const EventsSection = ({ ref, ...props }: EventsSectionProps) => {
         backgroundColor: "#f0f0f0",
         padding: "20px",
         textAlign: "center",
+        scrollMarginTop: "80px",
       }}
     >
       <Typography variant="h4" gutterBottom>
