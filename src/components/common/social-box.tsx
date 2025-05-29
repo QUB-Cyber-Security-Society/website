@@ -21,8 +21,8 @@ const SocialBox = ({ link }: SocialBoxProps) => {
         src={link}
         height="400"
         width="100%"
-        frameBorder="0"
         allowFullScreen={true}
+        sandbox="allow-scripts"
       ></iframe>
     </Box>
   );
